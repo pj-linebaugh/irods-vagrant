@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo -i -u postgres -- \
+    psql -c "CREATE USER $DB_USERNAME WITH PASSWORD '$DB_PASSWORD';" \
+         -c "CREATE DATABASE $DB_NAME WITH OWNER=$DB_USERNAME;" \
+         -c "GRANT ALL PRIVILEGES ON DATABASE $DB_NAME TO $DB_USERNAME;"
