@@ -1,2 +1,2 @@
 54a55
->     export HOME=/var/lib/irods
+>     export HOME=/etc/irods_client_rest_cpp
